@@ -1,4 +1,4 @@
-<h1 style="text-align: center;">Welcome To {{ $appName }}</h1>
+<h1 style="text-align: center; color:chocolate">Welcome To {{ $appName }}</h1>
 <!DOCTYPE html>
 <html>
 
@@ -8,7 +8,7 @@
     <style></style>
 </head>
 
-<body id="preview">
+<body id="preview" style="padding: 0 5%">
     <h1 class="code-line" data-line-start="0" data-line-end="1"><a id="Bravomailer_0"></a>Introduction</h1>
     <p class="has-line-data" data-line-start="2" data-line-end="4">Bravo-mailer is a project, a mini web platform for sending mail using an API provided.<br>
         The idea came to me when I was developing my Portfolio using front-end technologies, i.e. my <a href="https://kabirou-alassane.com">portfolio</a> should be totally static without any recourse to a backend, so I encountered difficulties when sending mails at the level of my contact form, I tried to use the famous <a href="http://formspree.io">formspree.io</a> but over time when I changed my domain name I had some problems. So, I decided to write my own platform for managing and sending emails, in the form of an API.</p>
@@ -30,8 +30,7 @@
         <a href="http://www.gnu.org/licenses/agpl-3.0"><img src="https://img.shields.io/badge/license-AGPL-blue.svg" alt="AGPL License"></a>
     </p>
     <h2 class="code-line" data-line-start="30" data-line-end="31"><a id="Support_30"></a>Support</h2>
-    <p class="has-line-data" data-line-start="32" data-line-end="33">For support, email me on <a href="/cdn-cgi/l/email-protection#f19a909398839e84c3c1c1c0b1969c90989ddf929e9c"><span class="__cf_email__" data-cfemail="2b404a494259445e191b1b1a6b4c464a424705484446">[email&#160;protected]</span></a>.</p>
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <p class="has-line-data" data-line-start="32" data-line-end="33">For support, email me on <a href="mailto:dev@kabirou-alassane.com"><span class="__cf_email__" data-cfemail="2b404a494259445e191b1b1a6b4c464a424705484446">[dev@kabirou-alassane.com]</span></a>.</p>
 </body>
 
 </html>
