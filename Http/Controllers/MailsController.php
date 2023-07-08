@@ -32,8 +32,7 @@ class MailsController extends Controller
         ];
 
         $mail->view('mails/contact', $data)->sendEmail($object);
-        //return $this->json(['status' => 'success']);
         return $this->back();
+        // return $this->render('mailsend', $data);
     }
-
 }

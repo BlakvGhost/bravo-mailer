@@ -15,7 +15,7 @@ class WelcomeController extends Controller
     public function index()
     {
         $user = User::find(1);
-        $this->dd($user->password);
+        $this->dd($user);
         return $this->html("<h2>Welcome To Index</h2>");
     }
 
@@ -29,28 +29,30 @@ class WelcomeController extends Controller
         return $this->html("<h2>Welcome To Store</h2>");
     }
 
-    public function show(User $user)
+    public function show($user)
     {
+        dd($user);
         return $this->html("<h2>Welcome To Show" . $user->email ."</h2>");
     }
     
-    public function edit(User $user)
+    public function edit($user)
     {
         return $this->html("<h2>Welcome To Edit" . $user->email ."</h2>");
     }
 
-    public function update(User $user)
+    public function update($user)
     {
         return $this->html("<h2>Welcome To update</h2>");
     }
 
-    public function destroy(User $user)
+    public function destroy($user)
     {
         return $this->html("<h2>Welcome To Destroy</h2>");
     }
 
     public function welcome()
     {
+        //$this->dd($this::class);
         return $this->render('welcome', context: ['appName' => $_ENV['APP_NAME']], title: 'Welcome');
     }
 }
