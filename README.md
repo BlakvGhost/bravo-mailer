@@ -16,6 +16,8 @@ Below is an example of using the API
 
 ![EXAMPLE OF API USAGE](guide-0.PNG)
 
+All project code is based on my [BRAVO](https://github.com/BlakvGhost/Bravo) v1.0.0 framework, so please do a `composer install` to see this code.
+
 ## Authors
 
 - [@BlakvGhost](https://github.com/BlakvGhost)
