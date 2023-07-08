@@ -2,7 +2,7 @@
 <html>
 
 <div id="preview" style="padding: 0 5%">
-    <h1 style="text-align: center; color:chocolate">Welcome To {{ $appName }}</h1>
+    <h1 style="text-align: center; color:chocolate">Welcome To <a href="https://github.com/BlakvGhost/bravo-mailer" target="_blank">{{ $appName }}</a> </h1>
     <h1 class="code-line" data-line-start="0" data-line-end="1"><a id="Bravomailer_0"></a>Introduction</h1>
     <p class="has-line-data" data-line-start="2" data-line-end="4">Bravo-mailer is a project, a mini web platform for sending mail using an API provided.<br>
         The idea came to me when I was developing my Portfolio using front-end technologies, i.e. my <a href="https://kabirou-alassane.com">portfolio</a> should be totally static without any recourse to a backend, so I encountered difficulties when sending mails at the level of my contact form, I tried to use the famous <a href="http://formspree.io">formspree.io</a> but over time when I changed my domain name I had some problems. So, I decided to write my own platform for managing and sending emails, in the form of an API.</p>
