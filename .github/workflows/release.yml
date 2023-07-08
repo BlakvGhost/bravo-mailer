@@ -5,46 +5,47 @@ on:
     branches:
       - main
 
-      jobs:
-        deploy:
-          runs-on: ubuntu-latest
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
           
-          steps:
-            - name: Checkout repository
-              uses: actions/checkout@v2
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
       
-            - name: Set up PHP
-              uses: shivammathur/setup-php@v2
-              with:
-                php-version: '8.1.10'
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1.10'
       
-            - name: Install Composer dependencies
-              run: composer install
+      - name: Install Composer dependencies
+        run: composer install
       
-            - name: Set environment variables
-              run: echo "APP_NAME=BRAVO" >> .env
-              run: echo "APP_ENV=dev" >> .env
-              run: echo "APP_URL=http://localhost" >> .env
-              run: echo "MAIL_MAILER=smtp" >> .env
-              run: echo "MAIL_HOST=${{ secrets.MAIL_HOST }}" >> .env
-              run: echo "MAIL_PORT=465" >> .env
-              run: echo "MAIL_USERNAME=${{ secrets.MAIL_USERNAME }}" >> .env
-              run: echo "MAIL_PASSWORD=${{ secrets.MAIL_PASSWORD }}" >> .env
-              run: echo "MAIL_ENCRYPTION=tls" >> .env
-              run: echo "MAIL_FROM_ADDRESS=${{ secrets.MAIL_USERNAME }}" >> .env
-              run: echo "MAIL_FROM_NAME=BRAVO" >> .env
-              run: echo "DB_CONNECTION=mysql" >> .env
-              run: echo "DB_HOST=localhost" >> .env
-              run: echo "DB_PORT=3306" >> .env
-              run: echo "DB_DATABASE=BRAVO" >> .env
-              run: echo "DB_USERNAME=BRAVO" >> .env
-              run: echo "DB_PASSWORD=BRAVO" >> .env
+      - name: Set environment variables
+        run: |
+          echo "APP_NAME=BRAVO" >> .env
+          echo "APP_ENV=dev" >> .env
+          echo "APP_URL=http://localhost" >> .env
+          echo "MAIL_MAILER=smtp" >> .env
+          echo "MAIL_HOST=${{ secrets.MAIL_HOST }}" >> .env
+          echo "MAIL_PORT=465" >> .env
+          echo "MAIL_USERNAME=${{ secrets.MAIL_USERNAME }}" >> .env
+          echo "MAIL_PASSWORD=${{ secrets.MAIL_PASSWORD }}" >> .env
+          echo "MAIL_ENCRYPTION=tls" >> .env
+          echo "MAIL_FROM_ADDRESS=${{ secrets.MAIL_USERNAME }}" >> .env
+          echo "MAIL_FROM_NAME=BRAVO" >> .env
+          echo "DB_CONNECTION=mysql" >> .env
+          echo "DB_HOST=localhost" >> .env
+          echo "DB_PORT=3306" >> .env
+          echo "DB_DATABASE=BRAVO" >> .env
+          echo "DB_USERNAME=BRAVO" >> .env
+          echo "DB_PASSWORD=BRAVO" >> .env
 
-            - name: FTP deployment
-              uses: SamKirkland/FTP-Deploy-Action@4.1.0
-              with:
-                server: ${{ secrets.FTP_SERVER }}
-                username: ${{ secrets.FTP_USERNAME }}
-                password: ${{ secrets.FTP_PASSWORD }}
-                server-dir: ${{ secrets.FTP_DIR }}
-                local-dir: "./"
+      - name: FTP deployment
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: ${{ secrets.FTP_DIR }}
+          local-dir: "./"
