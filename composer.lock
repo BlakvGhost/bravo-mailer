@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/BlakvGhost/Juste.git",
-                "reference": "81eb6b3701c3cff3bef16b4a3df722010e6cdb59"
+                "reference": "ff1ec3865855c63c1c3062f1f863fc0c83b81aa3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/BlakvGhost/Juste/zipball/81eb6b3701c3cff3bef16b4a3df722010e6cdb59",
-                "reference": "81eb6b3701c3cff3bef16b4a3df722010e6cdb59",
+                "url": "https://api.github.com/repos/BlakvGhost/Juste/zipball/ff1ec3865855c63c1c3062f1f863fc0c83b81aa3",
+                "reference": "ff1ec3865855c63c1c3062f1f863fc0c83b81aa3",
                 "shasum": ""
             },
             "require": {
@@ -43,9 +43,9 @@
             "description": "Juste is the Core of Project Bravo, my personal PHP MVC framework, it essentially ensures the understanding of Models, Controller, the basic template engine.It also manages the Routing, the middlewares, the database, and especially my super nice homemade mini ORM without forgetting the easy sending of emails.",
             "support": {
                 "issues": "https://github.com/BlakvGhost/Juste/issues",
-                "source": "https://github.com/BlakvGhost/Juste/tree/master"
+                "source": "https://github.com/BlakvGhost/Juste/tree/v.1.1.0"
             },
-            "time": "2023-06-07T00:15:27+00:00"
+            "time": "2023-06-11T12:06:06+00:00"
         },
         {
             "name": "doctrine/lexer",
